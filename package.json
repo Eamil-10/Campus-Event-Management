@@ -1,0 +1,39 @@
+{
+  "name": "university-event-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "University Event Coordination, Approval & Attendance Management Platform",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm --workspace=backend run dev",
+    "dev:frontend": "npm --workspace=frontend run dev",
+    "dev": "npm run dev:backend",
+    "build:backend": "npm --workspace=backend run build",
+    "build:frontend": "npm --workspace=frontend run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "lint:backend": "npm --workspace=backend run lint",
+    "lint:frontend": "npm --workspace=frontend run lint",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "test:backend": "npm --workspace=backend run test",
+    "test": "npm run test:backend",
+    "db:migrate": "npm --workspace=backend run db:migrate",
+    "db:seed": "npm --workspace=backend run db:seed",
+    "db:status": "npm --workspace=backend run db:status"
+  },
+  "keywords": [
+    "university",
+    "event-management",
+    "attendance",
+    "on-duty",
+    "approval-workflow"
+  ],
+  "author": "Antigravity Engineering Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "vitest": "^5.0.5"
+  }
+}
